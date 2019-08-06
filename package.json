@@ -1,0 +1,30 @@
+{
+  "name": "ag_week_6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "env2": "^2.2.2",
+    "nodemon": "^1.19.1",
+    "pg": "^7.12.0",
+    "supertest": "^4.0.2",
+    "tape": "^4.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facn6/AG_WEEK_6.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/facn6/AG_WEEK_6/issues"
+  },
+  "homepage": "https://github.com/facn6/AG_WEEK_6#readme"
+}
