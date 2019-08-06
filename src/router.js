@@ -2,18 +2,16 @@ const {
   homeHandler,
   publicHandler,
   errorHandler
-} = require('./handlers/handler.js');
+} = require("./handlers/handler.js");
 
 const router = (request, response) => {
   const { url } = request;
 
-  if (url === '/') {
+  if (url === "/") {
     homeHandler(response);
-  }
-   else if (url.includes('public')) {
+  } else if (url.includes(".")) {
     publicHandler(url, response);
-  }
-  else{
+  } else {
     errorHandler(response);
   }
 };
