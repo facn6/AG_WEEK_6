@@ -9,14 +9,39 @@
   <body>
     <section class="menu">
       <link rel="stylesheet" href="sign-in.html" />
-      <button href="/sign-in.html">Sign in</button>
-      <button href="register.html">Register</button>
-      <button href="index.html">Homepage</button>
-      <input type="text" placeholder="search for post" />
-      <button>Search</button>
+      <input id="search-input" type="text" placeholder="search for post" />
+      <button id="search-button">Search</button>
     </section>
-    <section id="posts">
-      Posts
+
+    <section class="post">
+      <input id="name-input" type="text" placeholder="Name" />
+      <textarea
+        rows="4"
+        cols="50"
+        id="post-input"
+        type="text"
+        placeholder="Write a post"
+      ></textarea>
+      <button id="post-button">POST</button>
+    </section>
+    <section class="posts">
+      <h2 class="title">HTML & CSS</h4>
+      <h6 class="name"> by Ghassan </h6>
+      <h4 class="description">
+        Testing the HTML and CSS by writing random posts
+      </h6>
+      <section class="comments">
+        <ul>
+          <li>That one is for the comment section</li>
+          <li>This is the second comment </li>
+          <li>This is the 3rd comment on this list that looks like facebook</li>
+        </ul>
+        <section class="comment-section">
+          <input type="text" id="comment-name" placeholder="Name">
+          <input name="comment" id="comment-post" cols="40" rows="1" placeholder="comment"></textarea>
+          <button id="comment-button">Submit</button>
+        </section>
+      </section>
     </section>
   </body>
 </html>
