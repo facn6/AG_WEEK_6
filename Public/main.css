@@ -1,4 +1,110 @@
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-emphasis: none;
+}
+
 .menu {
-  background: black;
+  background: rgb(0, 15, 126);
   color: white;
+  text-align: center;
+  padding: 20px 20px;
+}
+
+input {
+  border: whitesmoke;
+  border-bottom: 2px solid rgb(0, 15, 126);
+}
+
+#search-input {
+  padding: 10px 10px;
+  width: 40vw;
+  height: 30px;
+  border-bottom: solid 3px rgb(53, 64, 158);
+  border-left: solid 3px rgb(53, 64, 158);
+}
+
+#search-button {
+  height: 30px;
+  border-bottom: 5px solid rgb(0, 15, 126);
+}
+
+#search-button:hover {
+  border-bottom: 5px solid white;
+}
+
+.post {
+  border-top: white 2px solid;
+  background: whitesmoke;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#name-input {
+  margin: 20px 20px;
+  padding: 10px 10px;
+  width: 30vw;
+}
+
+#post-input {
+  border: rgb(0, 15, 126);
+  padding: 10px 10px;
+  margin: 10px 20px;
+  width: 90vw;
+}
+
+#post-button {
+  margin: 20px 20px;
+  width: 20vw;
+  height: 30px;
+  background: rgb(0, 15, 126);
+  color: whitesmoke;
+  border-bottom: 3px solid white;
+  border-left: 3px solid white;
+}
+
+#post-button:hover {
+  background: whitesmoke;
+  color: rgb(0, 15, 126);
+  border-bottom: 3px solid rgb(0, 15, 126);
+}
+
+.posts {
+  border-top: white 2px solid;
+  padding: 20px 20px;
+  background: whitesmoke;
+}
+
+ul {
+  list-style-type: none;
+  padding: 5px 5px;
+}
+li {
+  list-style-type: none;
+  border-left: 2px solid rgb(0, 15, 126);
+  padding: 5px 5px;
+  margin: 3px 3px;
+}
+
+#comment-button {
+  background: rgb(0, 15, 126);
+  color: whitesmoke;
+  height: 30px;
+}
+
+#comment-button:hover {
+  background: whitesmoke;
+  color: rgb(0, 15, 126);
+}
+
+#comment-post {
+  width: 50vw;
+  height: 30px;
+  padding: 10px 10px;
+}
+
+#comment-name {
+  height: 30px;
+  padding: 10px 10px;
 }
