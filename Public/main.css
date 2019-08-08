@@ -33,6 +33,10 @@ input {
   border-bottom: 5px solid white;
 }
 
+#main-title {
+  text-align: center;
+}
+
 .post {
   border-top: white 2px solid;
   background: whitesmoke;
@@ -42,6 +46,12 @@ input {
 }
 
 #name-input {
+  margin: 20px 20px;
+  padding: 10px 10px;
+  width: 30vw;
+}
+
+#post-title-input {
   margin: 20px 20px;
   padding: 10px 10px;
   width: 30vw;

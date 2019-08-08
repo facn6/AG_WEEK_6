@@ -1,16 +1,25 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-const dbConnection = require('./db_connection.js');
+console.log("HERE!");
 
-const sqlPath = path.join(__dirname, 'db_build.sql');
-const sql = fs.readFileSync(sqlPath).toString();
+const runDbBuild = () => {
+  console.log("HERE");
+  const dbConnection = require("./db_connection.js");
 
-//dbConnection.query(sql, (err, res) => {
-  //if (err) throw err;
-  //console.log('Users table created with result: ', res);
-//});
+  const sqlPath = path.join(__dirname, "db_build.sql");
+  const sql = fs.readFileSync(sqlPath).toString();
 
-const runDbBuild = cb => dbConnection.query(sql, cb)
+  dbConnection.query(sql, (err, res) => {
+    if (err) throw err;
+    console.log("DB Created");
+    dbConnection.end(() => {
+      console.log("connection closed");
+    });
+  });
+};
 
-module.exports = runDbBuild
+runDbBuild();
+// const runDbBuild = cb => dbConnection.query(sql, cb)
+
+module.exports = runDbBuild;

@@ -1,4 +1,4 @@
-const dbConnection = require('../database/db_connections.js');
+const dbConnection = require('../database/db_connection.js');
 
 
 const postDataposts = (name,post,cb) => {
