@@ -13,7 +13,7 @@
       <button id="search-button">Search</button>
     </section>
 
-    <section class="post">
+    <form class="post" id="postid" action="/create-post" method="post">
       <input id="name-input" type="text" placeholder="Name" />
       <textarea
         rows="4"
@@ -22,8 +22,8 @@
         type="text"
         placeholder="Write a post"
       ></textarea>
-      <button id="post-button">POST</button>
-    </section>
+      <button id="post-button" onclick="submit()">POST</button>
+    </form>
     <section class="posts">
       <h2 class="title">HTML & CSS</h4>
       <h6 class="name"> by Ghassan </h6>

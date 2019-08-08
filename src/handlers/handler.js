@@ -1,8 +1,8 @@
 const { readFile } = require("fs");
 const path = require("path");
-//
+const queryString=require('querystring');
 // const getData = require('../queries/getData.js');
-// const postData = require('../queries/postData.js');
+ const postData = require('../queries/postData.js');
 
 const serverError = (err, response) => {
   response.writeHead(500, "Content-Type:text/html");
@@ -35,6 +35,38 @@ const publicHandler = (url, response) => {
   });
 };
 
+const postsHandler =(request,response) => {
+let data = '';
+    request.on('data', function(chunk) {
+      data += chunk;
+    });
+    request.on('end', () => {
+      const name = queryString.parse(data).name;
+
+   postData.postDataposts(name, (err, res) => {
+        if (err) {
+          response.writeHead(500, 'Content-Type: text/html');
+          response.end('<h1>Sorry, there was a problem adding that user</h1>');
+          console.log(err);
+        } else {
+          response.writeHead(200, { 'Content-Type': 'text/html' });
+          fs.readFile(__dirname + '/../../Public/index.html', function(
+            error,
+            file
+          ) {
+            if (error) {
+              console.log(error);
+              return;
+            } else {
+              response.end(file);
+            }
+          });
+        }})
+
+      });
+};
+
+
 const errorHandler = response => {
   response.writeHead(404, { "content-type": "text/html" });
   response.end("<h1>404 Page Requested Cannot be Found</h1>");
@@ -43,5 +75,5 @@ const errorHandler = response => {
 module.exports = {
   homeHandler,
   publicHandler,
-  errorHandler
+  errorHandler,postsHandler
 };
