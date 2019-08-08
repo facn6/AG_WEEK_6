@@ -1,7 +1,8 @@
 const {
   homeHandler,
   publicHandler,
-  errorHandler
+  errorHandler,
+  postsHandler
 } = require("./handlers/handler.js");
 
 const router = (request, response) => {
@@ -11,7 +12,12 @@ const router = (request, response) => {
     homeHandler(response);
   } else if (url.includes(".")) {
     publicHandler(url, response);
-  } else {
+  }
+else if (url === '/create-post') {
+
+   postsHandler(request,response);
+}
+   else {
     errorHandler(response);
   }
 };
